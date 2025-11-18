@@ -69,4 +69,5 @@ endmodule
 <img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/7d57a0d5-c88b-4d56-9bc8-2928caab3a4e" />
 
 **RESULTS**
+
 Thus the D flipflop using verilog and validating their functionality using their functional tables is verified
