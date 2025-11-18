@@ -28,17 +28,45 @@ Next state of D flip-flop is always equal to data input, D for every positive tr
 
 **Procedure**
 
-/* write all the steps invloved */
+Start the program.
+
+Declare the module name and define the input and output ports.
+
+Inputs: D and Clock.
+
+Outputs: Q and Qbar.
+
+Create an always block that is triggered on the negative edge of the clock signal.
+
+Inside the always block, assign the value of the input D to the output Q.
+
+Assign the complement of D to Qbar to maintain the inverted output.
+
+End the always block and complete the module definition.
+
+Simulate the design by applying various combinations of D and Clock inputs to observe the behavior of the D flip-flop.
+
+Observe that the output Q follows the input D only at the negative edge of the clock pulse.
 
 **PROGRAM**
-
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+```
+module D_FLIP_FLOP(D, clock, Q, Qbar);
+input D, clock; 
+output reg Q, Qbar;
+always @(negedge clock)
+begin
+Q= D;
+Qbar = ~D;
+end
+endmodule 
+```
 
 **RTL LOGIC FOR FLIPFLOPS**
-
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/0e514ab0-d801-451b-8fdb-dbc2e9285aa9" />
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/7d57a0d5-c88b-4d56-9bc8-2928caab3a4e" />
 
 **RESULTS**
+Thus the D flipflop using verilog and validating their functionality using their functional tables is verified
